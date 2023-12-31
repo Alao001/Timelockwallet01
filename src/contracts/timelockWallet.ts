@@ -12,7 +12,11 @@ import {
     SmartContract,
     Utils,
 } from 'scrypt-ts'
-
+/*This contract is locking some funds that can not be distributed to the four Recipients addresses 
+ untill after a specific period mature time has passeed or expired.
+ The contract employ timelock mechanism in Bitcoin which ensure that the public method of
+ a smart contract can not be called untill specific period of time has passed.
+ */
 export class TimelockWallet extends SmartContract {
     @prop()
     readonly father: Addr
